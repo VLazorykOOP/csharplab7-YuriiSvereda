@@ -1,0 +1,28 @@
+﻿<Window x:Class="SecondTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecondTask"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <Button x:Name="OpenButton" Content="Open" Click="OpenButton_Click" Margin="0,0,10,0"/>
+            <Button x:Name="SaveButton" Content="Save" Click="SaveButton_Click" IsEnabled="False" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <Image x:Name="ImageControl" Grid.Row="1" Margin="10"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
+            <RadioButton x:Name="FullInversionRadio" Content="Full Inversion" IsChecked="True" Margin="0,0,10,0"/>
+            <RadioButton x:Name="ComponentInversionRadio" Content="Component Inversion" Margin="10,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

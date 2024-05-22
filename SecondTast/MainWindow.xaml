@@ -1,0 +1,30 @@
+﻿<Window x:Class="SecondTast.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecondTast"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open" Click="OpenFileClick" />
+                <MenuItem Header="_Save" Click="SaveFileClick" />
+            </MenuItem>
+        </Menu>
+
+        <Image x:Name="ImageDisplay" Grid.Row="1" Stretch="Uniform" />
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <RadioButton x:Name="FullInversionRadio" Content="Full Inversion" IsChecked="True" Checked="RadioButtonChecked" />
+            <RadioButton x:Name="ChannelInversionRadio" Content="Channel Inversion" Margin="10,0" Checked="RadioButtonChecked" />
+        </StackPanel>
+    </Grid>
+</Window>
