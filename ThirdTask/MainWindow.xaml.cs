@@ -40,11 +40,11 @@ namespace ThirdTask
             }
             else if (TriangleRadioButton.IsChecked == true)
             {
-                element = new EquilateralTriangle(text, color);
+                element = new EquilateralTriangle(text, color, int.Parse(UniversalField.Text));
             }
             else if (SquareRadioButton.IsChecked == true)
             {
-                element = new Pentagon(text, color);
+                element = new Pentagon(text, color, int.Parse(UniversalField.Text));
             }
 
             if (element != null)

@@ -74,11 +74,33 @@ namespace ThirdTask
 
     public class EquilateralTriangle : ShapeElement
     {
+        private int _side;
         public EquilateralTriangle(string text, Color color)
             : base(text, color)
         {
         }
+        public EquilateralTriangle(string text, Color color, int side)
+            : base(text, color)
+        {
+            _side = side;
+        }
 
+        /*public override void Draw(Canvas canvas, int x, int y)
+        {
+            var polygon = new Polygon
+            {
+                Stroke = new SolidColorBrush(Color),
+                StrokeThickness = 2
+            };
+
+            //double _height = Math.Sqrt(3) / 2 * 50;
+            polygon.Points.Add(new Point(x, y - _side / 2));
+            polygon.Points.Add(new Point(x - 25, y + _side / 2));
+            polygon.Points.Add(new Point(x + 25, y + _side / 2));
+
+            canvas.Children.Add(polygon);
+            AddText(canvas, x, y, Text);
+        }*/
         public override void Draw(Canvas canvas, int x, int y)
         {
             var polygon = new Polygon
@@ -87,14 +109,16 @@ namespace ThirdTask
                 StrokeThickness = 2
             };
 
-            double height = Math.Sqrt(3) / 2 * 50;
-            polygon.Points.Add(new Point(x, y - height / 2));
-            polygon.Points.Add(new Point(x - 25, y + height / 2));
-            polygon.Points.Add(new Point(x + 25, y + height / 2));
+            double height = Math.Sqrt(3) / 2 * _side;
+
+            polygon.Points.Add(new Point(x, y - 2 * height / 3)); // Верхня вершина
+            polygon.Points.Add(new Point(x - _side / 2, y + height / 3)); // Ліва нижня вершина
+            polygon.Points.Add(new Point(x + _side / 2, y + height / 3)); // Права нижня вершина
 
             canvas.Children.Add(polygon);
             AddText(canvas, x, y, Text);
         }
+
     }
 
 
