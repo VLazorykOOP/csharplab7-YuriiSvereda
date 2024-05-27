@@ -20,7 +20,7 @@
             <TextBlock Text="Тип елемента" />
             <RadioButton x:Name="RhombusRadioButton" Content="Ромб" GroupName="ElementType" IsChecked="True"/>
             <RadioButton x:Name="TriangleRadioButton" Content="Рівносторонній трикутник" GroupName="ElementType"/>
-            <RadioButton x:Name="SquareRadioButton" Content="Квадрат" GroupName="ElementType"/>
+            <RadioButton x:Name="SquareRadioButton" Content="П'ятикутник" GroupName="ElementType"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
                 <TextBlock Text="Параметри ромба" Width="120"/>
